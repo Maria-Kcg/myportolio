@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
-body{
+body {
   background-color: #F3ECE6;
+  font-family: "Inter", sans-serif;
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.text-normal {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .img-rounded {
