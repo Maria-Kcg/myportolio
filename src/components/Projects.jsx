@@ -48,7 +48,7 @@ const projects = [
     Image: jobconnect,
   },
   {
-    id: 1, num: "01",
+    id: 5, num: "05",
     title: "Bibliothèque",
     description: "Gestion des livres dans une bibliothèque",
     techno: ["React JS", "Tailwind CSS"],
@@ -57,7 +57,7 @@ const projects = [
     Image: biblio,
   },
   {
-    id: 2, num: "02",
+    id: 6, num: "06",
     title: "Dashboard",
     description: "Intégration d'une maquette Figma",
     techno: ["React JS", "Tailwind CSS"],
@@ -66,7 +66,7 @@ const projects = [
     Image: dashboard,
   },
   {
-    id: 3, num: "03",
+    id: 7, num: "07",
     title: "Jeu de numéro",
     description: "Jeu interactif de numéros",
     techno: ["HTML", "CSS", "JavaScript"],
@@ -75,7 +75,7 @@ const projects = [
     Image: Jeu,
   },
   {
-    id: 4, num: "04",
+    id: 8, num: "08",
     title: "Béton Constructions",
     description: "Reproduction d'un site vitrine",
     techno: ["HTML", "CSS", "JavaScript"],
@@ -84,7 +84,7 @@ const projects = [
     Image: beton,
   },
   {
-    id: 5, num: "05",
+    id: 9, num: "09",
     title: "Sang Plus",
     description: "Projet personnel — lutte contre le cancer du sang",
     techno: ["WordPress", "Elementor"],
