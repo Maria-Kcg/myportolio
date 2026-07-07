@@ -86,18 +86,16 @@ const Home = () => {
         </span>
 
         {/* Photo */}
-        <img src={photo} alt="Marie-Grâce" className="relative object-cover object-top z-2 w-[78%] max-w-[420px] h-[72%] filter grayscale-[8%] pb-20"/>
+        <img src={photo} alt="Marie-Grâce"
+          className="relative object-cover object-top z-2 w-[78%] max-w-[420px] h-[72%] filter grayscale-[8%] pb-20
+              rounded-2xl border border-white/10 shadow-2xl transition-all duration-1500 hover:scale-[1.02] hover:shadow-green-500/30
+              "/>
 
-        {/* Floating tags 
-        <span className="absolute z-10 absolute top-[16.5%] left-[5%] bg-[#2B1A0E] text-[#FAF7F4] px-[1.2rem] py-[0.6rem] text-[0.72rem] 
+
+        <span className="absolute z-10 absolute top-[16.5%] left-[5%] bg-[#2B1A0E] text-[#FAF7F4] px-[5rem] py-[0.05rem] text-[0.72rem] 
                         tracking-[0.12em] uppercase font-medium" >
-          Frontend Dev
         </span>
-        <span
-          className="absolute z-10 absolute bottom-[22%] left-[8%] bg-[#D4845A] text-[#FAF7F4] px-[1.2rem] py-[0.6rem] text-[0.72rem] 
-                    tracking-[0.12em] uppercase font-medium" >
-          React · Tailwind
-        </span>*/}
+
       </div>
     </section>
   );
