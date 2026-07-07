@@ -5,8 +5,48 @@ import biblio from "../assets/images/biblio.png";
 import Jeu from "../assets/images/Jeu.png";
 import dashboard from "../assets/images/dashboard.png";
 import sangplus from "../assets/images/sangplus.png";
+import climera from "../assets/images/climera.png";
+import jobconnect from "../assets/images/jobconnect.png";
+import skill2job from "../assets/images/skill2job.png";
+import espaceelles from "../assets/images/espaceelles.png";
 
 const projects = [
+  {
+    id: 1, num: "01",
+    title: "Espace Elles",
+    description: "Espace ELLES est une solution de réservation d'espace en ligne simple, moderne et accessible.",
+    techno: ["React", "Typscript", "Tailwind CSS"],
+    link: "https://climera.vercel.app/",
+    repoLink: "",
+    Image: climera,
+  },
+  {
+    id: 2, num: "02",
+    title: "Climera",
+    description: "Climera est une solution numérique dédiée aux agriculteurs du Bénin, offrant des outils intelligents pour suivre la météo, optimiser les cultures et adopter une agriculture durable.",
+    techno: ["HTML", "CSS", "JavaScript"],
+    link: "https://climera.vercel.app/",
+    repoLink: "https://github.com/Maria-Kcg/climera",
+    Image: climera,
+  },
+  {
+    id: 3, num: "03",
+    title: "Skill2Job",
+    description: "Skill2Job est une plateforme qui connecte les étudiants aux entreprises via des projets réels pour développer leurs compétences et construire un portfolio professionnel.",
+    techno: ["HTML", "CSS", "JavaScript"],
+    link: "https://skill2job-eight.vercel.app/",
+    repoLink: "https://github.com/Maria-Kcg/skill2job",
+    Image: skill2job,
+  },
+  {
+    id: 4, num: "04",
+    title: "JobConnect Bénin",
+    description: "JobConnect Bénin est une plateforme web qui facilite la recherche d'emploi en connectant les candidats aux opportunités professionnelles disponibles au Bénin.",
+    techno: ["HTML", "CSS", "JavaScript"],
+    link: "https://job-connect-beige.vercel.app/",
+    repoLink: "https://github.com/Maria-Kcg/job-connect",
+    Image: jobconnect,
+  },
   {
     id: 1, num: "01",
     title: "Bibliothèque",
