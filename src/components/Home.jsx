@@ -1,52 +1,106 @@
-import { Mail } from 'lucide-react';
-import photo from "..//assets/images/photo.jpg";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import { Mail } from "lucide-react";
+import photo from "../assets/images/photo.jpg";
 
 const Home = () => {
-    const [displayName, setDisplayName] = useState("");
-    const fullName = "Marie-Grâce";
+  const [displayName, setDisplayName] = useState("");
+  const fullName = "Marie-Grâce";
 
-    useEffect(() => {
-        let index = 0;
-        const interval = setInterval(() => {
-            if (index <= fullName.length) {
-                setDisplayName(fullName.slice(0, index));
-                index++
-            } else {
-                clearInterval(interval);
-            }
-        }, 300);
-        return () =>  clearInterval(interval)
-    }, [])
+  useEffect(() => {
+    let i = 0;
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        if (i <= fullName.length) {
+          setDisplayName(fullName.slice(0, i));
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 120);
+      return () => clearInterval(interval);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return (
-        <>
-            <section id="accueil" >
-                <div className="flex flex-col-reverse md:flex-row md:gap-20 lg:gap-50 justify-center items-center bg-[#F7F2EE]
-                   py-10 md:py-30 px-[10%]">
-                    
-                    <div>
-                        <h1 className="text-4xl md:text-6xl font-bold text-center md:text-left text-[#2B1E18]">
-                            Bonjour, <br /> je suis {" "}
-                            <span className="text-[#5C4033]">{displayName}</span>
-                        </h1>
-                        <p className="my-4 text-lg text-center md:text-left ">Développeuse frontend. Contactez-moi si vous avez besoin de mes services.</p>
-                        <a href="mailto:kpechegomariegrace@gmail.com" target='_blank'
-                            className='btn flex items-center justify-center p-3 gap-1 bg-[#D6A77A] rounded md:text-left 
-                            text-[#2B1E18] md:w-fit hover:text-[#D6A77A] hover:bg-[#5C4033] duration-500 font-medium'>
-                            <Mail size={16} />
-                            Contactez-moi
-                        </a>
-                    </div>
+  return (
+    <section id="accueil" className="min-h-screen grid grid-cols-1 md:grid-cols-2">
+      {/* ── Left ── */}
+      <div className="flex flex-col justify-center pt-[15vh] pr-[6vw] pb-[8vh] pl-[8vw]">
+        {/* Availability badge */}
+        <div className="inline-flex items-center gap-2 mt-8 mb-10 w-fit text-[0.72rem] uppercase text-[#FAF7F4] bg-[#8B5E3C] 
+                    px-[1rem] py-[0.6rem] tracking-[0.2rem] rounded">
+          <span className="avail-dot rounded-full w-[7px] h-[7px] bg-[#6EE7B7] shrink-0"></span>
+          Disponible
+        </div>
 
-                    <div className="mb-10 md:mb-0">
-                        <img src={photo} alt="ma photo" className='w-50 h-50 md:w-90 md:h-90 border-8 border-[#D6A77A] 
-                        object-cover object-top shadow-xl img-rounded' />
-                    </div>
-                </div>
-            </section>
-        </>
-    )
-}
+        {/* Label */}
+        <div
+          className="flex items-center gap-3 mb-10 text-[0.75rem] tracking-[0.22em] uppercase text-[#C4956A]">
+          <span className="w-[36px] h-[1px] bg-[#C4956A] block"></span>
+          Développeuse Frontend
+        </div>
+
+        {/* Name */}
+        <h1
+          className="font-display font-light leading-tigh text-[clamp(3.8rem,7vw,5rem)] text-[#2B1A0E] mb-[0.2rem]">
+          Bonjour,
+          je suis
+          <span
+            className="font-display italic block text-[#D4845A]" >
+            {displayName}
+            <span className="typing-cursor"></span>
+          </span>
+        </h1>
+
+        {/* Role */}
+        <p
+          className="font-display font-light text-[clamp(1.1rem,2.2vw,1.3rem)] text-[#8B5E3C] mt-[1.2rem] mb-[2.8rem] tracking-[0.03em]">
+          Interfaces modernes · React · Tailwind
+        </p>
+
+        {/* CTA */}
+        <a href="mailto:kpechegomariegrace@gmail.com" target="_blank" rel="noreferrer"
+          className="cta-btn relative inline-flex items-center gap-2 overflow-hidden no-underline w-fit rounded
+                   bg-[#2B1A0E] text-[#FAF7F4] px-[1rem] py-[0.7rem] text-[0.78rem] tracking-[0.15em] uppercase font-medium">
+          <span className="flex items-center gap-2 ">
+            <Mail size={14} className="inline" />
+            Contactez-moi
+          </span>
+        </a>
+
+        {/* Scroll hint */}
+        <div className="flex items-center gap-4 mt-16 text-[0.7rem] tracking-[0.7rem] uppercase text-[#C4956A]">
+          <div className="relative overflow-hidden w-[60px] h-[1px] bg-[#C4956A]/30">
+            <div className="scroll-line-anim absolute top-0 w-full h-full bg-[#D4845A]" />
+          </div>
+          <span>Défiler</span>
+        </div>
+      </div>
+
+      {/* ── Right ── */}
+      <div className="relative flex items-end justify-center overflow-hidden bg-[#F3EDE5]">
+        {/* Decorative big letter */}
+        <span className="font-display font-bold absolute pointer-events-none select-none text-[clamp(18rem, 28vw, 32rem)] 
+                        leading-[1] bottom-[-0.1em] right-[-0.05em] text-[#E5D5C0] z-0">
+          M
+        </span>
+
+        {/* Photo */}
+        <img src={photo} alt="Marie-Grâce" className="relative object-cover object-top z-2 w-[78%] max-w-[420px] h-[72%] filter grayscale-[8%] pb-20"/>
+
+        {/* Floating tags 
+        <span className="absolute z-10 absolute top-[16.5%] left-[5%] bg-[#2B1A0E] text-[#FAF7F4] px-[1.2rem] py-[0.6rem] text-[0.72rem] 
+                        tracking-[0.12em] uppercase font-medium" >
+          Frontend Dev
+        </span>
+        <span
+          className="absolute z-10 absolute bottom-[22%] left-[8%] bg-[#D4845A] text-[#FAF7F4] px-[1.2rem] py-[0.6rem] text-[0.72rem] 
+                    tracking-[0.12em] uppercase font-medium" >
+          React · Tailwind
+        </span>*/}
+      </div>
+    </section>
+  );
+};
 
 export default Home;
